@@ -31,7 +31,7 @@ export function HeroPage() {
         <div className="bg-black absolute top-0 w-full -z-50">
           <div className="overflow-hidden h-[32rem] relative">
             <img
-              src={`/src/assets/heroes/${heroId}.jpg`}
+              src={`/heroes/${heroId}.jpg`}
               alt=""
               className="w-full h-full object-cover batman"
             />
