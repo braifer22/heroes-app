@@ -39,10 +39,7 @@ export function HeroPage() {
           </div>
         </div>
         <header className="p-12 flex gap-12">
-          <img
-            src={`/src/assets/heroes/${heroId}.jpg`}
-            className="h-72 rounded"
-          />
+          <img src={`/heroes/${heroId}.jpg`} className="h-72 rounded" />
           <div className="text-white flex flex-col">
             <h1 className="font-bold text-4xl">{superhero}</h1>
             <p className="drop-shadow-xl my-4">
