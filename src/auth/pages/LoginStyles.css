@@ -1,5 +1,5 @@
 .loginForm {
-  @apply flex flex-col bg-white py-12 px-6 rounded w-96;
+  @apply flex flex-col bg-white py-12 px-6 rounded w-80 sm:w-96;
 
   h1 {
     @apply mb-8;
