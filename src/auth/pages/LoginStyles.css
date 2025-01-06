@@ -1,0 +1,15 @@
+.loginForm {
+  @apply flex flex-col bg-white py-12 px-6 rounded w-96;
+
+  h1 {
+    @apply mb-8;
+  }
+
+  label {
+    @apply m-1;
+  }
+
+  input {
+    @apply border mb-4 p-2 rounded placeholder:text-neutral-400/80;
+  }
+}
