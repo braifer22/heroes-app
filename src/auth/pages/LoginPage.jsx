@@ -19,10 +19,11 @@ export function LoginPage() {
   return (
     <>
       <section className="grid min-h-screen place-content-center bg-neutral-900">
-        <form className={'loginForm'} onSubmit={handleSubmit}>
+        <form className="loginForm" onSubmit={handleSubmit}>
           <h1 className="text-4xl text-center font-black">Heroes App</h1>
           <label htmlFor="username">Nombre de usuario:</label>
           <input
+            required
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             id="username"
