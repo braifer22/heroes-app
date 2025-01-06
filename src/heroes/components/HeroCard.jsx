@@ -1,13 +1,6 @@
 import { Link } from 'react-router';
 
-export function HeroCard({
-  superhero,
-  id,
-  alter_ego,
-  characters,
-  publisher,
-  first_appearance,
-}) {
+export function HeroCard({ superhero, id, publisher, first_appearance }) {
   const badgeColors =
     publisher === 'Marvel Comics'
       ? 'bg-red-100 text-red-600'
