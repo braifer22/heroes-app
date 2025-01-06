@@ -1,10 +1,15 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { AuthContext } from './AuthContext';
 import { authReducer } from './authreducer';
 import types from '../types/types';
 
+const initialUser = {
+  logged: false,
+  username: null,
+};
+
 export function AuthProvider({ children }) {
-  const [user, dispatch] = useReducer(authReducer, {});
+  const [userAuth, dispatch] = useReducer(authReducer, initialUser);
 
   function handleLogin(username) {
     dispatch({
@@ -19,8 +24,12 @@ export function AuthProvider({ children }) {
     });
   }
 
+  useEffect(() => {
+    console.log(userAuth.username);
+  }, [userAuth]);
+
   return (
-    <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
+    <AuthContext.Provider value={{ userAuth, handleLogin, handleLogout }}>
       {children}
     </AuthContext.Provider>
   );

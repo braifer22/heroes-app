@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 export function Navbar() {
   const navigate = useNavigate();
+
+  const { userAuth } = useContext(AuthContext);
 
   function handleLogout() {
     navigate('/login', { replace: true });
@@ -40,7 +44,7 @@ export function Navbar() {
       </nav>
 
       <button onClick={handleLogout} className={'flex items-center gap-2'}>
-        <span className="font-semibold">Logout</span>
+        <span className="font-semibold">{userAuth.username}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
