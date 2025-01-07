@@ -5,13 +5,13 @@ export function authReducer(state, action) {
     case types.login:
       return {
         logged: true,
-        username: action.payload,
+        user: action.payload,
       };
 
     case types.logout:
       return {
         logged: false,
-        username: null,
+        user: null,
       };
 
     default:
