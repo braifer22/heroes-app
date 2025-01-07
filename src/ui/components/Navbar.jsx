@@ -5,15 +5,16 @@ import { AuthContext } from '../../auth/context/AuthContext';
 export function Navbar() {
   const navigate = useNavigate();
 
-  const { userAuth } = useContext(AuthContext);
+  const { userAuth, handleLogout } = useContext(AuthContext);
 
-  function handleLogout() {
+  function handleClick() {
+    handleLogout();
     navigate('/login', { replace: true });
   }
 
   return (
     <header className="flex sticky top-0 z-50 items-center p-4 bg-neutral-900 text-white justify-between">
-      <h1 className="font-bold text-xl">HEROES/APP</h1>
+      <h1 className="font-bold text-xl">{userAuth?.user.name}</h1>
       <nav className="flex *:px-3  font-semibold *:duration-200 divide-x divide-neutral-700">
         <NavLink
           className={({ isActive }) =>
@@ -43,13 +44,17 @@ export function Navbar() {
         </NavLink>
       </nav>
 
-      <button onClick={handleLogout} className={'flex items-center gap-2'}>
-        <span className="font-semibold">{userAuth.username}</span>
+      <button
+        onClick={handleClick}
+        className={
+          'size-8 bg-neutral-800 rounded-full grid place-content-center'
+        }
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          viewBox="2 0 24 24"
           fill="none"
           stroke="#ef4444"
           strokeWidth="2"
