@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
-import './LoginStyles.css';
 import { AuthContext } from '../context/AuthContext';
+import './LoginStyles.css';
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -11,6 +11,8 @@ export function LoginPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    if (userInput.trim().length < 1) return;
 
     handleLogin(userInput);
     navigate('/marvel');
