@@ -5,7 +5,5 @@ import { AuthContext } from '../auth/context/AuthContext';
 export function PublicRoute({ children }) {
   const { logged } = useContext(AuthContext);
 
-  // const lastPath = localStorage.getItem('lastPath');
-
-  return !logged ? children : <Navigate to={'/dc'} />;
+  return !logged ? children : <Navigate to={'/'} />;
 }
