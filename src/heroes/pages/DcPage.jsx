@@ -1,6 +1,8 @@
 import { HeroList } from '../components/HeroList';
 
 export function DcPage() {
+  document.title = 'DC Comics | Heroes App';
+
   return (
     <>
       <main className="p-4">

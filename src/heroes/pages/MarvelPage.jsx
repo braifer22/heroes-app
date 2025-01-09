@@ -1,6 +1,7 @@
 import { HeroList } from '../components/HeroList';
 
 export function MarvelPage() {
+  document.title = 'Marvel Comics | Heroes App';
   return (
     <>
       <main className="p-4">

@@ -6,6 +6,8 @@ import queryString from 'query-string';
 import { useRef } from 'react';
 
 export function Search() {
+  document.title = 'Buscar Heroe | Heroes App';
+
   const inputRef = useRef(null);
 
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ export function Search() {
 
   return (
     <>
-      <main className="p-4">
+      <main className="py-4 mx-auto w-full max-w-[984px] p-4">
         <h1 className="text-4xl font-black my-4">Search Hero</h1>
 
         <section className="grid grid-cols-[auto,1fr] gap-6">

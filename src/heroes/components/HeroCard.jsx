@@ -9,11 +9,13 @@ export function HeroCard({ superhero, id, publisher, first_appearance }) {
   return (
     <Link to={`/hero/${id}`}>
       <article className="rounded drop-shadow-lg flex group bg-white overflow-hidden duration-200 ring-black hover:ring-1">
-        <img
-          src={`/heroes/${id}.jpg`}
-          className="sombra h-64 block aspect-[500/800] grayscale group-hover:grayscale-0 group-hover:scale-105 duration-300"
-          alt=""
-        />
+        <div className="max-w-40 w-full overflow-hidden">
+          <img
+            src={`/heroes/${id}.jpg`}
+            className="sombra h-64 block aspect-[500/800] grayscale group-hover:grayscale-0 group-hover:scale-105 duration-300"
+            alt=""
+          />
+        </div>
         <div className="p-4 flex flex-col gap-2">
           <div
             className={`text-xs font-semibold py-1 px-2 rounded-full ${badgeColors} self-start`}

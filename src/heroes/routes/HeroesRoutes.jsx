@@ -11,13 +11,13 @@ export function HeroesRoutes() {
       <Navbar />
 
       <Routes>
-        <Route path="/*" element={<Navigate to={'/marvel'} />} />
-
-        <Route path="/dc" element={<DcPage />} />
         <Route path="/marvel" element={<MarvelPage />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/dc" element={<DcPage />} />
 
+        <Route path="/search" element={<Search />} />
         <Route path="/hero/:id" element={<HeroPage />} />
+
+        <Route path="/*" element={<Navigate to={'/marvel'} />} />
       </Routes>
     </>
   );
